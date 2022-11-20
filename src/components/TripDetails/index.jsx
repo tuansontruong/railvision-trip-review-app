@@ -1,4 +1,8 @@
 import {
+  getTotalTripDuration,
+  convertDateFormat
+} from '../../utils/dateTimeHandler'
+import {
   HeaderSecondary,
   HeaderPrimary,
   StyledUnoderedList,
@@ -10,10 +14,14 @@ const TripDetails = ({ trip }) => {
   return (
     trip && (
       <>
-        <HeaderSecondary>Some Date</HeaderSecondary>
+        <HeaderSecondary>{convertDateFormat(trip.date)}</HeaderSecondary>
         <HeaderPrimary>
-          TRIP DURATION (todo) &nbsp;|&nbsp; AVG. SPEED{' '}
-          {trip?.averageSpeedInMph} MPH
+          TRIP DURATION{' '}
+          {getTotalTripDuration(
+            startStationDepartedTime,
+            endStationArrivedTime
+          )}
+          H &nbsp;|&nbsp; AVG. SPEED {trip?.averageSpeedInMph} MPH
         </HeaderPrimary>
         <div>
           <StyledUnoderedList>
