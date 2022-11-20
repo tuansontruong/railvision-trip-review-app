@@ -11,6 +11,10 @@ import {
 } from './style'
 
 const TripDetails = ({ trip }) => {
+  const startStationDepartedTime = trip?.tripDetails[0]?.departedTime
+  const endStationArrivedTime =
+    trip?.tripDetails[trip.tripDetails.length - 1]?.arrivedTime
+
   return (
     trip && (
       <>
