@@ -12,6 +12,10 @@ export const getTotalTripDuration = (startTimeInHHMM, endTimeInHHMM) => {
   return `${hours}:${minutes}`
 }
 
+export const getTotalTripDurationInSeconds = durationInHHmm => {
+  return moment.duration(durationInHHmm).asSeconds()
+}
+
 /* yyyy-mm-dd to MMMM DD, YYYY) */
 export const convertDateFormat = yyyyMMdd => {
   if (!moment(yyyyMMdd, 'YYYY-MM-DD').isValid()) return 'Invalid Date'
