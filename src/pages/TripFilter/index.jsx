@@ -9,6 +9,7 @@ import TripHeader from '../../components/TripHeader'
 import Container from '../../layouts/Container'
 import TripSelector from '../../components/TripSelector'
 import TripDetails from '../../components/TripDetails'
+import { getTripIdByFilter } from '../../utils/filterHandler'
 
 const filterOptions = [
   {
@@ -41,7 +42,7 @@ const TripFilter = () => {
   const [filter, setFilter] = useState(null)
 
   const tripReviewData = useContext(TripReviewContext)
-  const currentTripId = 'A23'
+  const currentTripId = getTripIdByFilter(tripReviewData, filter)
   const filteredTrip =
     tripReviewData && currentTripId && tripReviewData[currentTripId]
 
