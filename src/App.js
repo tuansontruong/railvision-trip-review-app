@@ -1,9 +1,11 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from 'react-router-dom'
 
-import TripReview from "./pages/TripReview";
-import TripFilter from "./pages/TripFilter";
+import AnimationLayout from './layouts/AnimationLayout'
 
-import { PATHS } from "./config/paths";
+import TripReview from './pages/TripReview'
+import TripFilter from './pages/TripFilter'
+
+import { PATHS } from './config/paths'
 
 const Page = () => {
   return (
@@ -15,11 +17,14 @@ const Page = () => {
         </Route>
       </Routes>
     </>
-  );
-};
+  )
+}
 
 const App = () => {
-  return <Page theme={theme} setTheme={setTheme} />;
-};
+  // TODO: implement theme later
+  const theme = 'light'
+  const setTheme = undefined
+  return <Page theme={theme} setTheme={setTheme} />
+}
 
-export default App;
+export default App
