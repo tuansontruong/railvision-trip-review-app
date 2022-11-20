@@ -9,7 +9,6 @@ const DropdownList = ({ data }) => {
     onChangeFn,
     onChangeValueKey
   } = data
-
   return (
     <StyledSelect
       placeholder={!options ? 'Loading Trips...' : 'Select Trip'}
