@@ -1,14 +1,18 @@
+import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { TripReviewContext } from './context/tripReviewContext'
 
-import AnimationLayout from './layouts/AnimationLayout'
+import { ThemeProvider } from 'styled-components'
+
+import { TripReviewContext } from './context/tripReviewContext'
 
 import TripReview from './pages/TripReview'
 import TripFilter from './pages/TripFilter'
-
-import { useLoadTripReviewData } from './hooks/useLoadTripReviewData'
+import AnimationLayout from './layouts/AnimationLayout'
 
 import { PATHS } from './config/paths'
+import { themes } from './config/themes'
+
+import { useLoadTripReviewData } from './hooks/useLoadTripReviewData'
 
 const Page = () => {
   return (
@@ -24,14 +28,15 @@ const Page = () => {
 }
 
 const App = () => {
-  // TODO: implement theme later
-  const theme = 'light'
-  const setTheme = undefined
+  const [theme, setTheme] = useState('light')
+
   const { tripReviewData } = useLoadTripReviewData()
 
   return (
     <TripReviewContext.Provider value={tripReviewData}>
-      <Page theme={theme} setTheme={setTheme} />
+      <ThemeProvider theme={themes[theme]}>
+        <Page />
+      </ThemeProvider>
     </TripReviewContext.Provider>
   )
 }
