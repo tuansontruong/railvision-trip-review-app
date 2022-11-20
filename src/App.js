@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
 
-function App() {
+import TripReview from "./pages/TripReview";
+import TripFilter from "./pages/TripFilter";
+
+import { PATHS } from "./config/paths";
+
+const Page = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route element={<AnimationLayout />}>
+          <Route path={PATHS.REVIEW} element={<TripReview />} />
+          <Route path={PATHS.FILTER} element={<TripFilter />} />
+        </Route>
+      </Routes>
+    </>
   );
-}
+};
+
+const App = () => {
+  return <Page theme={theme} setTheme={setTheme} />;
+};
 
 export default App;
