@@ -7,6 +7,6 @@ export const Container = styled.div`
 export const DropdownTitle = styled.label`
   font-size: 10.5px !important;
   text-transform: uppercase;
-  color: black;
+  color: ${({ theme }) => theme.secondaryColor};
   margin-bottom: 5px;
 `

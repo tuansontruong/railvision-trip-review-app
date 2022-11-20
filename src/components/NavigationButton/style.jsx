@@ -4,7 +4,7 @@ export const Button = styled.button`
   text-transform: uppercase;
   font-weight: bold;
   margin: 2em 0;
-  background: red;
+  background: ${({ theme }) => theme.btnColor};
   border-radius: 3px;
   border: none;
   color: #ffffff;
