@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const StyledContainer = styled.div`
   min-height: 100vh;
-  background-color: grey;
+  background-color: ${({ theme }) => theme.backgroundColor};
   margin: 0 auto;
   width: 100%;
   display: flex;
