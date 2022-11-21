@@ -1,5 +1,5 @@
 import { getTripIdByFilter } from '..'
-import { combinedTripDataReviewExample2 } from './testData'
+import { combinedTripDataReviewExample2 } from './__mocks__/data'
 
 test('Get trip id by longest duration', () => {
   expect(
