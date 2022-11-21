@@ -20,6 +20,7 @@ const DropdownList = ({ data }) => {
       separator={false}
       clearable={false}
       searchable={true}
+      backspaceDelete={false}
       create={false}
       keepOpen={false}
       dropdownHandle={true}
