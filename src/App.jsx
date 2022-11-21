@@ -13,7 +13,7 @@ import TripFilter from './pages/TripFilter'
 import AnimationLayout from './layouts/AnimationLayout'
 
 import { PATHS } from './config/paths'
-import { themes } from './config/themes'
+import { THEMES } from './config/themes'
 
 import { useLoadTripReviewData } from './hooks/useLoadTripReviewData'
 
@@ -67,7 +67,7 @@ const App = () => {
 
   return (
     <TripReviewContext.Provider value={tripReviewData}>
-      <ThemeProvider theme={themes[theme]}>
+      <ThemeProvider theme={THEMES[theme]}>
         <Page theme={theme} setTheme={setTheme} />
       </ThemeProvider>
     </TripReviewContext.Provider>

@@ -60,6 +60,7 @@ const TripDetails = ({ trip }) => {
                   </StyledListItem>
                 )
 
+              /* Middle stations */
               return (
                 <StyledListItemSecond key={id}>
                   <img

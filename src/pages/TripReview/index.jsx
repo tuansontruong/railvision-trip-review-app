@@ -1,14 +1,19 @@
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 
+// Context
 import { TripReviewContext } from '../../context/tripReviewContext'
 
+// Config
+import { PATHS } from '../../config/paths'
+
+// Components
+import Container from '../../layouts/Container'
 import TripDetails from '../../components/TripDetails'
 import NavigationButton from '../../components/NavigationButton'
-
-import { PATHS } from '../../config/paths'
-import Container from '../../layouts/Container'
 import TripHeader from '../../components/TripHeader'
 import TripSelector from '../../components/TripSelector'
+
+// Utils
 import { transformData } from '../../utils/dataTransformHandler'
 
 const TripReview = () => {

@@ -1,5 +1,5 @@
-import DropdownList from '../DropdownList'
 import { Container, DropdownTitle } from './style'
+import DropdownList from '../DropdownList'
 
 const TripSelector = ({ data }) => {
   return (
