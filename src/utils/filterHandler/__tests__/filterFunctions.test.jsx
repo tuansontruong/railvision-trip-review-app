@@ -7,7 +7,7 @@ import {
   findShortestDurationTrip
 } from '..'
 import { transformData } from '../../dataTransformHandler'
-import { combinedTripDataReviewExample2 } from './testData'
+import { combinedTripDataReviewExample2 } from './__mocks__/data'
 
 const tripReviewDataListExample = transformData(combinedTripDataReviewExample2)
 
