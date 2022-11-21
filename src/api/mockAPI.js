@@ -1,6 +1,6 @@
 import tripReviewData from './tripReviewData'
 
-const FAKE_DELAY_IN_MS = 2000
+const FAKE_DELAY_IN_MS = 3000
 
 export const fetchTripReviewData = () => {
   return new Promise((resolve, reject) => {
