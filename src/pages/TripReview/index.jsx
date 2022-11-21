@@ -35,7 +35,7 @@ const TripReview = () => {
       />
 
       {currentTrip && (
-        <div key={Math.random()} className="fade-in">
+        <div key={Math.random()}>
           <TripDetails trip={currentTrip} />{' '}
         </div>
       )}

@@ -61,7 +61,7 @@ const TripFilter = () => {
         }}
       />
       {filteredTrip && (
-        <div key={Math.random()} className="fade-in">
+        <div key={Math.random()}>
           <TripDetails trip={filteredTrip} />{' '}
         </div>
       )}
