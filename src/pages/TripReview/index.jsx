@@ -27,7 +27,10 @@ const TripReview = () => {
   return (
     <Container>
       <TripHeader text="Trip Review" />
-      <p style={{ color: 'grey' }}>Implement some new feature...</p>
+      <p style={{ color: 'grey' }}>
+        (contain all latest features): Feature A, feature B, feature C
+      </p>
+      <p style={{ color: 'grey' }}>Implement new feature D...</p>
       <TripSelector
         data={{
           selectorTitle: 'Trip Selector',
