@@ -1,14 +1,19 @@
 import { useContext, useState } from 'react'
 
+// Context
 import { TripReviewContext } from '../../context/tripReviewContext'
 
+// Config
 import { PATHS } from '../../config/paths'
 
+// Components
+import Container from '../../layouts/Container'
 import NavigationButton from '../../components/NavigationButton'
 import TripHeader from '../../components/TripHeader'
-import Container from '../../layouts/Container'
 import TripSelector from '../../components/TripSelector'
 import TripDetails from '../../components/TripDetails'
+
+// Utils
 import { getTripIdByFilter } from '../../utils/filterHandler'
 
 const filterOptions = [
@@ -61,7 +66,7 @@ const TripFilter = () => {
         }}
       />
       {filteredTrip && (
-        <div key={Math.random()} className="fade-in">
+        <div key={Math.random()}>
           <TripDetails trip={filteredTrip} />{' '}
         </div>
       )}

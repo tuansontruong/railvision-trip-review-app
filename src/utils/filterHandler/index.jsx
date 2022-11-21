@@ -1,28 +1,4 @@
-import {
-  getTotalTripDuration,
-  getTotalTripDurationInSeconds
-} from '../dateTimeHandler'
-
-// Take the original data object and turn it into a list of objects + additional fields
-export const transformData = tripReviewData => {
-  return Object.entries(tripReviewData).map(tripReviewEntry => {
-    const [tripId, info] = tripReviewEntry
-    const startStationDepartedTime = info.tripDetails[0]?.departedTime
-    const endStationArrivedTime =
-      info.tripDetails[info.tripDetails.length - 1]?.arrivedTime
-
-    // return new object with 3 new fields:
-    // 1.tripId  -  2.durationInSeconds  -  3. numberOfStops
-    return {
-      tripId,
-      durationInSeconds: getTotalTripDurationInSeconds(
-        getTotalTripDuration(startStationDepartedTime, endStationArrivedTime)
-      ),
-      numberOfStops: info.tripDetails.length,
-      ...info
-    }
-  })
-}
+import { transformData } from '../dataTransformHandler'
 
 export const getTripIdByFilter = (tripReviewData, filter) => {
   if (!(tripReviewData && filter)) return null

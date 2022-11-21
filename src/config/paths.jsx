@@ -1,5 +1,5 @@
 export const PATHS = {
-  REVIEW: "/",
-  FILTER: "/filter",
+  REVIEW: '/',
+  FILTER: '/filter'
   // add additional paths here
-};
+}

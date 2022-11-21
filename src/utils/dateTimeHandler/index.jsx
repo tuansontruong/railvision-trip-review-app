@@ -12,6 +12,7 @@ export const getTotalTripDuration = (startTimeInHHMM, endTimeInHHMM) => {
   return `${hours}:${minutes}`
 }
 
+/* Convert duration in HH:MM to duration in seconds*/
 export const getTotalTripDurationInSeconds = durationInHHmm => {
   return moment.duration(durationInHHmm).asSeconds()
 }

@@ -7,7 +7,7 @@ export const useLoadTripReviewData = () => {
   useEffect(() => {
     // API fetch on page load
     fetchTripReviewData().then(data => setTripReviewData(data))
-  }, [tripReviewData])
+  }, [])
 
   return { tripReviewData }
 }
