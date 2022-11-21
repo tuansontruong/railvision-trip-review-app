@@ -9,6 +9,7 @@ import { PATHS } from '../../config/paths'
 import Container from '../../layouts/Container'
 import TripHeader from '../../components/TripHeader'
 import TripSelector from '../../components/TripSelector'
+import { transformData } from '../../utils/dataTransformHandler'
 
 const TripReview = () => {
   const tripReviewData = useContext(TripReviewContext)
@@ -16,18 +17,7 @@ const TripReview = () => {
 
   const currentTrip = tripReviewData && tripReviewData[currentTripId]
 
-  const tripReviewDataList =
-    tripReviewData &&
-    Object.entries(tripReviewData).map(tripReviewEntry => {
-      const [tripId, info] = tripReviewEntry
-      return {
-        tripId,
-        signature: `${tripId} | ${info.tripDetails[0].id} - ${
-          info.tripDetails.slice(-1)[0].id
-        }`,
-        ...info
-      }
-    })
+  const tripReviewDataList = transformData(tripReviewData)
 
   return (
     <Container>
