@@ -30,6 +30,7 @@ const TripReview = () => {
       <p style={{ color: 'grey' }}>
         (contain all latest features): Feature A, feature B, feature C
       </p>
+      <p style={{ color: 'grey' }}>Implement new feature D...</p>
       <TripSelector
         data={{
           selectorTitle: 'Trip Selector',
