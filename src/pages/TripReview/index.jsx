@@ -27,6 +27,7 @@ const TripReview = () => {
   return (
     <Container>
       <TripHeader text="Trip Review" />
+      <p style={{ color: 'grey' }}>Implement some new feature...</p>
       <TripSelector
         data={{
           selectorTitle: 'Trip Selector',
