@@ -151,7 +151,7 @@ README.md
 
 ## Deployment & Environments
 
-Deployed app with Vercel to multiple environments (master, QA, development, feature). Any new commit on a branch will trigger an automatic deployment to the corresponding environment.
+Deployed app with Vercel to multiple environments (production, QA, development, feature). Any new commit on a branch will trigger an automatic deployment to the corresponding environment.
 
 - **Production**: https://railvision-trip-review-app.vercel.app
   - the production environment
@@ -174,7 +174,7 @@ Deployed app with Vercel to multiple environments (master, QA, development, feat
 - Used Jest to test utility functions (such as getTripDuration, convertDateFormat)
 - The test files are located inside the utils folder:
   - `utils / module / tests / (all test files)`
-- (I wrote all the tests)
+- (all the tests for utility functions are available)
 
 ### Component Testing
 
