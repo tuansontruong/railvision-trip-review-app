@@ -8,19 +8,35 @@
 
 https://railvision-trip-review-app.vercel.app
 
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Project Screenshots](#project-screenshots)
+- [Technologies](#technologies)
+  - [Core](#core)
+  - [Navigation](#navigation)
+  - [Animations](#animations)
+  - [Styling](#styling)
+  - [State management](#state-management)
+  - [Date and Time](#date-and-time)
+  - [Dark/Light Mode](#darklight-mode)
+  - [Testing](#testing)
+  - [Hosting and Deployment](#hosting-and-deployment)
+- [Project Structure](#project-structure)
+- [Deployment & Environments](#deployment--environments)
+- [Unit Testing](#unit-testing)
+  - [Utility Testing](#utility-testing)
+  - [Component Testing](#component-testing)
+- [Code Formatting & Linting](#code-formatting--linting)
+- [Git Workflow](#git-workflow)
+- [Coding Standards](#coding-standards)
+- [Change Log](#change-log)
+- [Setup / Installation](#setup--installation)
+- [Task Management](#task-management)
+
 ## Project Screenshots
 
-- Trip Review - Light & Dark mode
-
-<img src="figures/1.png" width="400" height="auto" />
-
-<img src="figures/2.png" width="400" height="auto" />
-
-- Trip Filter - Light & Dark mode
-
-<img src="figures/4.png" width="400" height="auto" />
-
-<img src="figures/3.png" width="400" height="auto" />
+[Back to Table of Contents](#table-of-contents)
 
 ## Technologies
 
@@ -62,6 +78,8 @@ https://railvision-trip-review-app.vercel.app
 ### Hosting and Deployment
 
 - **Vercel**: hosting & continuous deployment
+
+[Back to Table of Contents](#table-of-contents)
 
 ## Project Structure
 
@@ -117,6 +135,8 @@ src
 README.md
 ```
 
+[Back to Table of Contents](#table-of-contents)
+
 ## Deployment & Environments
 
 Deployed app with Vercel to multiple environments (master, QA, development, feature). Any new commit on a branch will trigger an automatic deployment to the corresponding environment.
@@ -129,6 +149,8 @@ Deployed app with Vercel to multiple environments (master, QA, development, feat
   - contains most updated features
 - **Feature**: https://feat-somefeature-railvision-trip-review-app.vercel.app
   - used to develop and test a new feature
+
+[Back to Table of Contents](#table-of-contents)
 
 ## Unit Testing
 
@@ -150,23 +172,33 @@ Run `npm test` to run all test suites:
 
 <img src="figures/test.png" width="600" height="auto" />
 
+[Back to Table of Contents](#table-of-contents)
+
 ## Code Formatting & Linting
 
 - Use Prettier as code formatter to auto format code (on Save). Rules defined in `.prettierrc`. (to avoid conflicting formatting between developers)
 - Use Eslint to find errors in code. Rules defined in `.eslintrc`
+
+[Back to Table of Contents](#table-of-contents)
 
 ## Git Workflow
 
 We could have a file for documenting and explaining the Git Workflow used for this project so that every developer must strictly follow:
 [git-workflow.md](documentation/git-workflow.md) (it's a sample template - not written by me)
 
+[Back to Table of Contents](#table-of-contents)
+
 ## Coding Standards
 
 In order for every developer to follow the same consistent coding standards in the same project, we could include a coding standards/best practices file: [coding-standards.md](documentation/coding-standards.md)
 
+[Back to Table of Contents](#table-of-contents)
+
 ## Change Log
 
 If we release our product by versions, we could have a change log file ([CHANGELOG.MD](documentation/CHANGELOG.md)) to document all the notable changes to this project.
+
+[Back to Table of Contents](#table-of-contents)
 
 ## Setup / Installation
 
@@ -189,3 +221,5 @@ Start app:
 Visit App locally:
 
 `localhost:3000`
+
+[Back to Table of Contents](#table-of-contents)
