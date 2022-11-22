@@ -1,70 +1,191 @@
-# Getting Started with Create React App
+# Trip Review Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+\*\*\* Aside from implementing the project, I also worked on other aspects including writing tests, deploy to multi-environments, documenting project structure, coding standards, etc... that we may want to have if this was a real project (please checkout this Readme).
 
-## Available Scripts
+\*\*\* **Bonus features**: Replicated the design + implemented dark mode + smooth animations
 
-In the project directory, you can run:
+## Demo Link
 
-### `npm start`
+https://railvision-trip-review-app.vercel.app
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Screenshots
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Trip Review - Light & Dark mode
 
-### `npm test`
+<img src="figures/1.png" width="400" height="auto" />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img src="figures/2.png" width="400" height="auto" />
 
-### `npm run build`
+- Trip Filter - Light & Dark mode
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img src="figures/4.png" width="400" height="auto" />
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img src="figures/3.png" width="400" height="auto" />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies
 
-### `npm run eject`
+### Core
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **React.js & JavaScript ES6**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Navigation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **react-router-v6**: page navigation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Animations
 
-## Learn More
+- **framer-motion**: Animation when transition between 2 pages
+- **css animation**: Fade-in animation when display trip
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Styling
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **styled-component**: used for styling components, page layout, themes,...
 
-### Code Splitting
+### State management
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **useContext**: React hook for global state management (if we had more complex global states we will use libraries like Redux, Jotai,...)
 
-### Analyzing the Bundle Size
+### Date and Time
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **momentjs**: handle date and time operations
 
-### Making a Progressive Web App
+### Dark/Light Mode
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **styled components (Theme Provider)**: used to dynamically switch themes
+- Use localStorage to remember the selected theme
 
-### Advanced Configuration
+### Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **React testing library**: React component testing
+- **Jest**: utility testing
 
-### Deployment
+### Hosting and Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **Vercel**: hosting & continuous deployment
 
-### `npm run build` fails to minify
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+documentation
+├── CHANGELOG.md         ---> document changes for every version release
+├── git-workflow.md      ---> document git workflow to follow for this repo
+├── coding-standards.md  ---> document coding standards to follow
+figures                  ---> images for Readme.md
+src
+├── api                  ---> mock API fetch trip review data
+├── assets               ---> contains images, icons, etc.
+├── config
+│   ├── paths
+│   └── themes
+├── context              ---> global state management with context provider
+├── hooks                ---> reusable custom hooks (e.g API fetch)
+├── layouts              ---> layout components defining structure of a page
+├── components           ---> reusable/modular components used across the pages
+│   ├── ComponentA
+│   │   ├── index.jsx    ---> React component
+│   │   ├── style.jsx    ---> styled component
+        └── .test.jsx    ---> component testing
+│   ├── ComponentB
+│       ├── index.jsx
+│       ├── style.jsx
+        └── .test.jsx
+│   ...
+├──pages
+│   ├── pageA            ---> a page of the application
+│   │   ├── index.jsx
+│   │   ├── style.jsx
+        └── .test.jsx
+│   ├── pageB
+│       ├── index.jsx
+│       ├── style.jsx
+        └── .test.jsx
+│   ...
+└── utils
+    ├── moduleA          ---> util module for important calculation
+    │   └──tests         ---> all unit tests for each module
+    │       ├── fn1.test.js
+    │       ├── fn2.test.js
+    │       ...
+    │   └── index.jsx
+    ├── moduleB
+    │   ├── tests
+            ├── fn1.test.js
+    │       ├── fn2.test.js
+            ...
+    │   └── index.jsx
+    ...
+README.md
+```
+
+## Deployment & Environments
+
+Deployed app with Vercel to multiple environments (master, QA, development, feature). Any new commit on a branch will trigger an automatic deployment to the corresponding environment.
+
+- **Production**: https://railvision-trip-review-app.vercel.app
+  - the production environment
+- **QA**: https://qa-railvision-trip-review-app.vercel.app
+  - used to test (quality assurance) before go live/merge to production
+- **Development**: https://dev-railvision-trip-review-app.vercel.app
+  - contains most updated features
+- **Feature**: https://feat-somefeature-railvision-trip-review-app.vercel.app
+  - used to develop and test a new feature
+
+## Unit Testing
+
+### Utility Testing
+
+- Used Jest to test utility functions (such as getTripDuration, convertDateFormat)
+- The test files are located inside the utils folder:
+  - `utils / module / tests / (all test files)`
+- (I wrote all the tests)
+
+### Component Testing
+
+- Used React testing library to test each React component
+- The test files are located inside the component folder:
+  - `Component / .test.jsx`
+- (However, I did not write all the tests)
+
+Run `npm test` to run all test suites:
+
+<img src="figures/test.png" width="600" height="auto" />
+
+## Code Formatting & Linting
+
+- Use Prettier as code formatter to auto format code (on Save). Rules defined in `.prettierrc`. (to avoid conflicting formatting between developers)
+- Use Eslint to find errors in code. Rules defined in `.eslintrc`
+
+## Git Workflow
+
+We could have a file for documenting and explaining the Git Workflow used for this project so that every developer must strictly follow:
+[git-workflow.md](documentation/git-workflow.md) (it's a sample template - not written by me)
+
+## Coding Standards
+
+In order for every developer to follow the same consistent coding standards in the same project, we could include a coding standards/best practices file: [coding-standards.md](documentation/coding-standards.md)
+
+## Change Log
+
+If we release our product by versions, we could have a change log file ([CHANGELOG.MD](documentation/CHANGELOG.md)) to document all the notable changes to this project.
+
+## Setup / Installation
+
+`node` and `npm` (or `yarn`) are required to be installed on your machine.
+
+Clone this repository.
+
+Installation:
+
+`npm install`
+
+Run tests:
+
+`npm test` _(will run both component and utility tests)_
+
+Start app:
+
+`npm start`
+
+Visit App locally:
+
+`localhost:3000`
