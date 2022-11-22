@@ -1,246 +1,70 @@
-# Trip Review Web App
+# Getting Started with Create React App
 
-\*\*\* Aside from implementing the project, I also worked on other aspects including writing tests, deploy to multi-environments, documenting project structure, coding standards, etc... that we may want to have if this was a real project (please checkout this Readme).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-\*\*\* **Bonus features**: Replicated the design + implemented dark mode + smooth animations
+## Available Scripts
 
-## Demo Link
+In the project directory, you can run:
 
-https://railvision-trip-review-app.vercel.app
+### `npm start`
 
-## Table of Contents
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- [Table of Contents](#table-of-contents)
-- [Project Screenshots](#project-screenshots)
-- [Technologies](#technologies)
-  - [Core](#core)
-  - [Navigation](#navigation)
-  - [Animations](#animations)
-  - [Styling](#styling)
-  - [State management](#state-management)
-  - [Date and Time](#date-and-time)
-  - [Dark/Light Mode](#darklight-mode)
-  - [Testing](#testing)
-  - [Hosting and Deployment](#hosting-and-deployment)
-- [Project Structure](#project-structure)
-- [Deployment & Environments](#deployment--environments)
-- [Unit Testing](#unit-testing)
-  - [Utility Testing](#utility-testing)
-  - [Component Testing](#component-testing)
-- [Code Formatting & Linting](#code-formatting--linting)
-- [Git Workflow](#git-workflow)
-- [Coding Standards](#coding-standards)
-- [Change Log](#change-log)
-- [Setup / Installation](#setup--installation)
-- [Task Management](#task-management)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## Project Screenshots
+### `npm test`
 
-- Trip Review - Light & Dark mode
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-<img src="figures/1.png" width="400" height="auto" />
+### `npm run build`
 
-<img src="figures/2.png" width="400" height="auto" />
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- Trip Filter - Light & Dark mode
-
-<img src="figures/4.png" width="400" height="auto" />
-
-<img src="figures/3.png" width="400" height="auto" />
-
-[Back to Table of Contents](#table-of-contents)
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Technologies
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### Core
+### `npm run eject`
 
-- **React.js & JavaScript ES6**
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-### Navigation
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-- **react-router-v6**: page navigation
-
-### Animations
-
-- **framer-motion**: Animation when transition between 2 pages
-- **css animation**: Fade-in animation when display trip
-
-### Styling
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-- **styled-component**: used for styling components, page layout, themes,...
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-### State management
+## Learn More
 
-- **useContext**: React hook for global state management (if we had more complex global states we will use libraries like Redux, Jotai,...)
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-### Date and Time
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-- **momentjs**: handle date and time operations
+### Code Splitting
 
-### Dark/Light Mode
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-- **styled components (Theme Provider)**: used to dynamically switch themes
-- Use localStorage to remember the selected theme
+### Analyzing the Bundle Size
 
-### Testing
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-- **React testing library**: React component testing
-- **Jest**: utility testing
+### Making a Progressive Web App
 
-### Hosting and Deployment
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-- **Vercel**: hosting & continuous deployment
+### Advanced Configuration
 
-[Back to Table of Contents](#table-of-contents)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-## Project Structure
+### Deployment
 
-```
-documentation
-├── CHANGELOG.md         ---> document changes for every version release
-├── git-workflow.md      ---> document git workflow to follow for this repo
-├── coding-standards.md  ---> document coding standards to follow
-figures                  ---> images for Readme.md
-src
-├── api                  ---> mock API fetch trip review data
-├── assets               ---> contains images, icons, etc.
-├── config
-│   ├── paths
-│   └── themes
-├── context              ---> global state management with context provider
-├── hooks                ---> reusable custom hooks (e.g API fetch)
-├── layouts              ---> layout components defining structure of a page
-├── components           ---> reusable/modular components used across the pages
-│   ├── ComponentA
-│   │   ├── index.jsx    ---> React component
-│   │   ├── style.jsx    ---> styled component
-        └── .test.jsx    ---> component testing
-│   ├── ComponentB
-│       ├── index.jsx
-│       ├── style.jsx
-        └── .test.jsx
-│   ...
-├──pages
-│   ├── pageA            ---> a page of the application
-│   │   ├── index.jsx
-│   │   ├── style.jsx
-        └── .test.jsx
-│   ├── pageB
-│       ├── index.jsx
-│       ├── style.jsx
-        └── .test.jsx
-│   ...
-└── utils
-    ├── moduleA          ---> util module for important calculation
-    │   └──tests         ---> all unit tests for each module
-    │       ├── fn1.test.js
-    │       ├── fn2.test.js
-    │       ...
-    │   └── index.jsx
-    ├── moduleB
-    │   ├── tests
-            ├── fn1.test.js
-    │       ├── fn2.test.js
-            ...
-    │   └── index.jsx
-    ...
-README.md
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-[Back to Table of Contents](#table-of-contents)
+### `npm run build` fails to minify
 
-## Deployment & Environments
-
-Deployed app with Vercel to multiple environments (production, QA, development, feature). Any new commit on a branch will trigger an automatic deployment to the corresponding environment.
-
-- **Production**: https://railvision-trip-review-app.vercel.app
-  - the production environment
-- **QA**: https://qa-railvision-trip-review-app.vercel.app
-  - used to test (quality assurance) before go live/merge to production
-- **Development**: https://dev-railvision-trip-review-app.vercel.app
-  - contains most updated features
-- **Feature**: https://feat-somefeature-railvision-trip-review-app.vercel.app
-  - used to develop and test a new feature
-
-<img src="figures/deploy.png" width="700" height="auto" />
-<img src="figures/deploy2.png" width="700" height="auto" />
-
-[Back to Table of Contents](#table-of-contents)
-
-## Unit Testing
-
-### Utility Testing
-
-- Used Jest to test utility functions (such as getTripDuration, convertDateFormat)
-- The test files are located inside the utils folder:
-  - `utils / module / tests / (all test files)`
-- (all the tests for utility functions are available)
-
-### Component Testing
-
-- Used React testing library to test each React component
-- The test files are located inside the component folder:
-  - `Component / .test.jsx`
-- (However, I did not write all the tests)
-
-Run `npm test` to run all test suites:
-
-<img src="figures/test.png" width="600" height="auto" />
-
-[Back to Table of Contents](#table-of-contents)
-
-## Code Formatting & Linting
-
-- Use Prettier as code formatter to auto format code (on Save). Rules defined in `.prettierrc`. (to avoid conflicting formatting between developers)
-- Use Eslint to find errors in code. Rules defined in `.eslintrc`
-
-[Back to Table of Contents](#table-of-contents)
-
-## Git Workflow
-
-We could have a file for documenting and explaining the Git Workflow used for this project so that every developer must strictly follow:
-[git-workflow.md](documentation/git-workflow.md) (it's a sample template - not written by me)
-
-[Back to Table of Contents](#table-of-contents)
-
-## Coding Standards
-
-In order for every developer to follow the same consistent coding standards in the same project, we could include a coding standards/best practices file: [coding-standards.md](documentation/coding-standards.md)
-
-[Back to Table of Contents](#table-of-contents)
-
-## Change Log
-
-If we release our product by versions, we could have a change log file ([CHANGELOG.MD](documentation/CHANGELOG.md)) to document all the notable changes to this project.
-
-[Back to Table of Contents](#table-of-contents)
-
-## Setup / Installation
-
-`node` and `npm` (or `yarn`) are required to be installed on your machine.
-
-Clone this repository.
-
-Installation:
-
-`npm install`
-
-Run tests:
-
-`npm test` _(will run both component and utility tests)_
-
-Start app:
-
-`npm start`
-
-Visit App locally:
-
-`localhost:3000`
-
-[Back to Table of Contents](#table-of-contents)
-
-## Task Management
-
-We could also use project management tools like Trello, Jira, Rally... to manage and track tasks.
-
-[Back to Table of Contents](#table-of-contents)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
