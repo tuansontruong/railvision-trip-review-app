@@ -36,6 +36,18 @@ https://railvision-trip-review-app.vercel.app
 
 ## Project Screenshots
 
+- Trip Review - Light & Dark mode
+
+<img src="figures/1.png" width="400" height="auto" />
+
+<img src="figures/2.png" width="400" height="auto" />
+
+- Trip Filter - Light & Dark mode
+
+<img src="figures/4.png" width="400" height="auto" />
+
+<img src="figures/3.png" width="400" height="auto" />
+
 [Back to Table of Contents](#table-of-contents)
 
 ## Technologies
@@ -150,6 +162,9 @@ Deployed app with Vercel to multiple environments (master, QA, development, feat
 - **Feature**: https://feat-somefeature-railvision-trip-review-app.vercel.app
   - used to develop and test a new feature
 
+<img src="figures/deploy.png" width="700" height="auto" />
+<img src="figures/deploy2.png" width="700" height="auto" />
+
 [Back to Table of Contents](#table-of-contents)
 
 ## Unit Testing
@@ -221,5 +236,11 @@ Start app:
 Visit App locally:
 
 `localhost:3000`
+
+[Back to Table of Contents](#table-of-contents)
+
+## Task Management
+
+We could also use project management tools like Trello, Jira, Rally... to manage and track tasks.
 
 [Back to Table of Contents](#table-of-contents)
