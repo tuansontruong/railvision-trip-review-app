@@ -2,7 +2,7 @@ import { transformData } from '..'
 import {
   tripDataReviewExample,
   combinedTripDataReviewExample
-} from '../../filterHandler/__tests__/testData'
+} from './__mocks__/data'
 
 test('Test transform - 1 trip', () => {
   expect(transformData(tripDataReviewExample)).toEqual([
